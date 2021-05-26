@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+	 	 
+	 	 <bean id="student" class="com.capg.beans.Student">
+	 	<constructor-arg value="101" name="sId"/>
+	 	<constructor-arg value="Ramesh" name="sName"/>
+	 	<constructor-arg value="18" name="age"/>
+	 	<constructor-arg value="70" name="marks"/>
+	 	
+	 </bean>
+	 
+	  
+	  <bean id="student2" class="com.capg.beans.Student">
+	 	<property name="sId" value="102"></property>
+	 	<property name="sName" value="Ashish"></property>
+	 	<property name="age" value="15"></property>
+	 	<property name="marks" value="65"></property>
+	 	<property name="course" ref="course1"></property>
+	 </bean>
+	 
+	 <bean id="course2" class="com.capg.beans.Courses">
+	 	<property name="cId" value="10"></property>
+	 	<property name="cName" value="Spring"></property>
+	 	<property name="duration" value="5"></property>
+	 	
+	 </bean>
+</beans>
